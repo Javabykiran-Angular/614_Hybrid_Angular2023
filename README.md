@@ -1,4 +1,4 @@
-# 614_Hybdrid_Angular2023
+# 614_Hybrid_Angular2023
 
 My Youtube Channel https://www.youtube.com/c/SumitNiche
 
