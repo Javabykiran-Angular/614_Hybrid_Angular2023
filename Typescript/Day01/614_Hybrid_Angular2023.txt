@@ -1,0 +1,60 @@
+			Welcome To Angular Module
+				  Sumit Raokhande
+
+- B.E.Electronics, KBP satara
+- M.Tech Electronics, Walchand College Sangli
+- C-Dac Wimc , Sunbeam pune
+- worked as Mobile Application developer at tivre business solution
+- worked on J2ME,Symbian,Windows Mobile,Reaserach Motion
+- Worked as Android developer at veetron 
+- Live android application prasieo,autohub,garage
+- Worked as JDE Developer of Oracle Product
+- Worked as OpenSDK developer
+- work as angular developer
+- work on google cloud & docker 
+
+  
+  - daily mon to frid session arround 1.30 min to avg it may 1 hr session or 2 hr but depends on topic 
+  - Duration is required upto 48 hrs to 50hrs on working days 
+  - weekly test or on 30% completion of topic 
+  - daiy practice is required 
+  - all source code & soft copy notes will be given except images 
+  - i am very strict about the time 
+  - it is one man show no extra trainer is available fotr ur doubt solving session or no extra time is availabel to resolve ur doubt 
+  but u cAN JOIN SESSION  before 10 min & i also present after the session to resolve ur doubt 
+  - don't miss any session whenver u join my 2nd session go through the previous session 
+  - all interview question will be given 
+  - there are no any angular project 
+  - Oops concept
+  - basics of html & css (140 & 141 , core java 1108 => 6 times call )
+  
+  from my side 
+  - typescript 
+  - Angular freamwork
+  
+  
+  1 node 14.15.1
+  2 vscode installed
+  3 typescript@5.1.0
+  
+  npm install -g typescript@5.0.1
+  
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
