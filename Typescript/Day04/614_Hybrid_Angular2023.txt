@@ -1,0 +1,68 @@
+Last Lectue
+1 Data Types 
+	var str!:string;
+	console.log(str);
+	var myany:any;
+	var temp=2.5;
+2 Type Assertion
+	1 Angle bracket
+		var a:any;
+		var temp=(<string> a);
+		
+	2 as syntax 
+		var temp=(a as string)
+	
+3 Oeprators
+	airthmathic,logical,bitwise,relation,ternary,unaray,assignament
+=== 	
+4 Control Statement
+	if(count<4){
+	...
+	}
+	var choice=2;
+	switch(choice){
+	....
+	}
+5 Loop Statement
+	while,do-while,for 
+	for(var i=0;i<4;i++){
+	....
+	}
+7 var Vs const Vs let 
+let => wthinin nearest block 
+
+for(let i=0;i<4;i++){
+	
+}
+
+const pi =3.14;
+
+
+summary
+1 How to define data type to variable?
+2 If we not giving any data type?
+3 What type assertion 
+4 Need of Types Assertion
+5 How many 2 synatx ?
+6 How angle syntax ?
+7 Where to use as syntax 
+8 Which Operators?
+9 Explain Strongly equality 
+10 Which Control Statement?
+11 Which Loop Statement
+12 Explain let keywords?
+13 Difference var Vs let Vs const 
+ 
+
+Today Lecture
+1 user define Functions Type 
+2 annonymous function
+3 fat arrow function
+
+
+summary
+1 What is user define function 
+2 how may types 
+3 Implement of that function?
+3 What is annonymous function?
+4 what fat arrow function?
