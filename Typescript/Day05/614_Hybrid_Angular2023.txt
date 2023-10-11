@@ -1,0 +1,78 @@
+Last Lectue
+1 user define Functions Type 
+function add1(){
+	...
+}
+
+add1();
+
+function add2(a:number,b:number){
+	....
+}
+
+add2(10,2);
+
+function add3():number{
+	retun (8+8);
+}
+
+let res=add3();
+
+function add4(a:number,b:number):number{
+	retun (a+b)
+}
+
+console.log(`
+	Addition ${add4(10,2)}
+`)
+
+
+2 annonymous function
+	
+	let temp1=function (){
+		...
+	}
+	temp1();
+	let temp2=function (a:number,b:number):number{
+		return (a+b);
+	}
+	
+	let res1=temp2(10,2)
+	
+	
+3 fat arrow function
+	let temp3=()=>{
+	...
+	}
+	
+	temp3();
+	
+	let temp4=(a:number,b:number):number=>{
+	return (a+b);
+	}
+	
+	let res1=temp4(10,2);
+
+
+summary
+1 What is user define function 
+2 how many types of user define function 
+3 Implemention of that function?
+3 What is annonymous function?
+4 what is fat arrow function?
+
+Today Lecture
+1 Optional parameter Functions
+2 Default parameter Functions
+3 basics of array
+4 join method
+5 foreach method 
+
+summary
+1 What is optional parameter
+2 What is default parameter 
+3 How to create array
+4 How to use join()?
+5 how to use foreach()?
+
+
