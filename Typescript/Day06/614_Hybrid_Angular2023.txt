@@ -1,0 +1,60 @@
+Last Leclet i=0;tue
+1 Optional parameter Functions
+	function add1(a?:number,b?:number){
+	....
+	}
+	add1(10);
+
+2 Default parameter Functions
+	function add2(a:number,b:number=10){
+	...
+	}
+	add2(40,50)
+3 basics of array
+	let a:number[]=[10,20,30];
+	let a:number[]=[];
+	let a=[2.5,56,"sumit"]
+	
+	for(let i=0;i<a.length;i++){
+	....
+	}
+	
+	console.log(a);
+	
+	
+4 join method
+	console.log(a.join("  ")))
+	console.log(a.join()))
+5 foreach method 
+	
+	a.forEach((myvalue,i,arr)=>{
+	...
+	})
+
+summary
+1 What is optional parameter
+2 What is default parameter 
+3 How to create array
+4 How to use join()?
+5 how to use foreach()?
+
+Today Lecture
+1 Rest parameter function
+2 Push & pop Method
+3 splice method 
+4 slice method 
+5 map method 
+6 json Object
+
+summary
+1 What is rest parameter function 
+2 How to add dynamically data?
+3 How to work splice?
+4 How slice works?
+5 How map works?
+6 What json?
+7 how to access json?
+
+
+
+
