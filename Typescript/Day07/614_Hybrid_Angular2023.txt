@@ -1,0 +1,67 @@
+Last Lecture 
+1 Rest parameter function
+	function display(str:string,...item:number[]){
+	....
+	}
+	
+	display('..',45,56,89);
+	
+2 Push & pop Method
+	
+	a.push(45)
+	console.log(a)
+	a.push(10,20,30);
+	console.log(a)
+	let res=a.pop();
+
+3 splice method 
+	a.splice(1,0,45)
+	a.splice(2,1);
+	a.splice(2,0,56,89);
+	a.splice(3,1,90)
+	a.splice(4,1,70,90)
+4 slice method 
+	let temp=course.slice(1,6)
+5 map method 
+	let sqrarr=a.map((value)=>{
+		return (value*value)
+	})
+6 json Object
+	let jsonObj={
+		id:9,
+		"fname":'Sumit',
+		lname:''
+	}
+	
+	//1 dot operator 
+	
+	console.log(`
+		ID :: ${jsonObj.id}
+		fname:: ${jsonObj.fname}
+	`)
+	
+	2 square
+	
+	console.log(`
+		ID :: ${jsonObj["id"]}
+		fname:: ${jsonObj["fname"]}
+	`)
+
+summary
+1 What is rest parameter function 
+2 How to add dynamically data?
+3 How to work splice?
+4 How slice works?
+5 How map works?
+6 What json?
+7 how to access json?
+
+
+Today Lecture
+1 Array Of Object 
+
+
+
+
+
+
