@@ -1,0 +1,87 @@
+Last Lecture 
+1 Array Of Object 
+let arrObj=[
+	{
+		id:9,
+		fname:"..",
+		lname:"",
+		country:{
+			cid:1,
+			cname:"india"
+		},
+		month:["jan",...],
+		result:[
+			{
+				subj:"M1",
+				marks:55
+			},
+			{
+				subj:"M1",
+				marks:55
+			}
+			,{
+				subj:"M1",
+				marks:55
+			}
+			
+		]
+	},
+	{
+		id:9,
+		fname:"..",
+		lanem:""
+	}
+	,{
+		id:9,
+		fname:"..",
+		lanem:""
+	}
+	
+];
+
+
+	for(let i=0;i<arrObj.length;i++){
+		console.log(`
+			id	:: ${arrObj[i].id}
+			....
+			Country name :: ${arrObj[i].country.cname}
+			Month		:: ${arrObj[i].month}
+		`)
+		
+		for(let j=0;j<arrObj[i].result.length;j++){
+			console.log(`
+				Subj:: ${arrObj[i].result[j].subj}
+			`)
+		}
+		
+		
+		arrObj[i].result.forEach((item)=>{
+				console.log(`
+					Subj :: ${item.subj}
+				`)
+		})
+		
+	}
+
+
+Today Lecture
+1 Additional Features of Typescript
+2 Classe
+3 Object,property and Method
+4 Constructor
+5 Access Specifier
+6 Access in same Package
+7 Access in different package
+
+summary
+1 How we can access the classess
+2 How to make Object 
+3 How many Access Specifier
+4 how to use export & import 
+
+
+
+
+
+
+
