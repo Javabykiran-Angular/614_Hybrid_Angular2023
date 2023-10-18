@@ -1,0 +1,109 @@
+Last Lecture 
+1 inheritance 
+2 method override
+3 interface
+4 composition/ has relation
+
+export class Shape{
+	myarea(){
+	...
+	}
+}
+....
+export class Circle extends Shape{
+		radius:number;
+		area:number;
+		
+		constructor(..){
+			super();
+			...
+		}
+		
+		
+	 override myarea(){
+			this.area=...
+		}
+		
+		display(){
+		....
+		}
+}
+
+
+export class Rectangle extends Shape{
+	....
+}
+
+main.ts
+...
+...
+
+let obj=new Circle(2);
+obj.myarea();
+obj.display();
+
+let rectObj=new Rectangle();
+obj.myarea();
+obj.display();
+
+
+export class Employee{
+	fname:string;
+	lname:string;
+	fullname?:string;
+	display();
+}
+
+export class EmployeeDetails implements Employee {
+		fname:string;
+		...
+		sal:number;
+		
+		dept:Department;
+		
+		constructor(...,role:string){
+		....
+		this.dept=new Department(role);
+		}
+		
+		display(){
+		....
+		this.dept.getRole()
+		}
+}
+
+....
+let obj=new EmployeeDetails(...);
+obj.display();
+
+export class Department{
+	private role:string;
+	
+	constructor(..){
+	..
+	}
+	getRole(){
+		return this.role;
+	}
+	setRole(r:string){
+		this.role=r;
+	}
+}
+
+https://www.youtube.com/watch?v=jBBTYKIgNT8&list=PLa3i9wpSPojEDNTe66s5XhXPSd50XqjSv&index=2&t=12s
+
+
+Today Lecture
+1 Angular Installation
+
+
+npm uninstall -g @angular/cli
+
+
+
+
+
+
+
+
+
