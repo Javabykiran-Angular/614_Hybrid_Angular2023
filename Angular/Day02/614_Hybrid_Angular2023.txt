@@ -1,0 +1,66 @@
+Last Lecture 
+1 Angular Installation
+
+
+npm uninstall -g @angular/cli
+
+Today Lecture
+1 what is angular ?
+ - it is front end technology
+ - It is a freamwork
+ - Angular (google) , React js(facebook ), embber js,vue js , JSP 
+ - gmail,github,sbi mutual funds,ganna.com,walmart 
+
+Why Angular?/ advantage of Angular ?/ explain the features of angular?
+
+- Angular is a platform that makes it easy to build applications with the web.
+- Angular have module ,declarative templates, dependency injection, services ,end to end tooling, and integrated best practices to solve development challenges. 
+
+- Angular build applications that live on the web, mobile,or the desktop.
+
+- Angular has matured into a client-side MVW framework  (i.e. Model-View-Whatever) for building of complex single page Application.
+
+- It places equal importance on application testing & application writing, while simplifying the development process.
+
+- Angular has tag line One framework Mobile & desktop,web.
+
+- Cross platform Progressive web apps (i.e. It support all platform mobile,desktop,different os)
+
+- It famous also for his speed & performance (bcz it is optimized for today's javascript virtual machine)
+
+- It is universal framework (i.e. node.js with express js,.net,php,java & other servers for near-instants server side language)
+
+- It has code splitting
+	- It has in build router system to load quickly
+	- Users only load code required to render the view they request.
+	
+- You can create Quick UI views with simple & powerful template syntax.
+
+- Angular is in build CLI(Command Line Interface) Tool,so you fast building,add components & tests it.
+
+
+index.html
+
+<html>
+	<head></head>
+	<body><body>
+</html>
+
+
+SPA - Single Page Application
+It contain only 1head+1 body
+SPA environment in the browser — no page reloads, no extra wait time.
+Angular These are, many E.g:
+Gmail, Google Maps, GitHub.
+ganna.com,sbi mutual funds
+
+
+
+
+
+
+
+
+
+
+
