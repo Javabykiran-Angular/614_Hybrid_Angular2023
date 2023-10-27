@@ -1,0 +1,134 @@
+Last Lecture 
+1 what is angular ?
+ - it is front end technology
+ - It is a freamwork
+ - Angular (google) , React js(facebook ), embber js,vue js , JSP 
+ - gmail,github,sbi mutual funds,ganna.com,walmart 
+
+Why Angular?/ advantage of Angular ?/ explain the features of angular?
+
+- Angular is a platform that makes it easy to build applications with the web.
+- Angular have module ,declarative templates, dependency injection, services ,end to end tooling, and integrated best practices to solve development challenges. 
+
+- Angular build applications that live on the web, mobile,or the desktop.
+
+- Angular has matured into a client-side MVW framework  (i.e. Model-View-Whatever) for building of complex single page Application.
+
+- It places equal importance on application testing & application writing, while simplifying the development process.
+
+- Angular has tag line One framework Mobile & desktop,web.
+
+- Cross platform Progressive web apps (i.e. It support all platform mobile,desktop,different os)
+
+- It famous also for his speed & performance (bcz it is optimized for today's javascript virtual machine)
+
+- It is universal framework (i.e. node.js with express js,.net,php,java & other servers for near-instants server side language)
+
+- It has code splitting
+	- It has in build router system to load quickly
+	- Users only load code required to render the view they request.
+	
+- You can create Quick UI views with simple & powerful template syntax.
+
+- Angular is in build CLI(Command Line Interface) Tool,so you fast building,add components & tests it.
+
+
+index.html
+
+<html>
+	<head></head>
+	<body><body>
+</html>
+
+
+SPA - Single Page Application
+It contain only 1head+1 body
+SPA environment in the browser — no page reloads, no extra wait time.
+Angular These are, many E.g:
+Gmail, Google Maps, GitHub.
+ganna.com,sbi mutual funds
+
+Today Lecture
+1 Discussion of Test
+2 Angular Arch. Overview
+	- Angular is component orientated arch.
+	- component 
+		1 view file => .html => 1
+		2 stylesheet file => .css => multiple 
+		3 component => .ts file  => 1 
+		4 testing file => .spec.ts 
+		
+		- it has metadata=> It holds extra information about components
+		@Component({
+			selector:''
+			templateUrl:'./...',
+			StyleUrls:'..'
+		})
+	- data binding
+	 - it flows a data from component file to view file 
+	 - It is one directiuon data flow so it is called one way data binding
+	1 String interpolation
+	2 Property Binding
+	3 Style binding
+	4 class binding
+ - Event Binding
+	- it flows a data/http request  from view to component
+	- data is flow in one way direction 
+	- click,change, k/b,mouse event, custom event 
+ - Directives
+	- it change / manipulate the behaviour or your dom Structor dynamically 
+	- 1 Attribute 
+		ngStyle,ngClass..
+	  2 component 
+		..<router-outlet>
+		
+	  3 structural dirctive
+		*ngIf,*ngFor,...
+	  4 event directive
+ - AppModule =>
+	- It is module file 
+	- It has one root module => AppModule 
+	- it has multiple custom module is present.
+ 	
+	1 declartion
+		- To register a component
+		- to create its factory class 
+	2 import 
+		- to register ur module 
+		- or if u want use inbuild angular module 
+	3 Services
+		- it is simple class 
+		- it write a BL
+		- code maintain
+		- reuse
+		- DI => it is key to used service effectively 
+		
+	4 routing
+		- It is used to navigate from one component to another 
+		- u can send a data from one to other 
+		- u can apply security 
+		- u can used lazy loading 
+  - Injector 
+	- It is used For DI 
+	- u can register any 3rd party services/module
+	- In built angular service/module u can inject 
+	
+3 File Structure
+4 Angular Application Flow
+
+summery
+1 Explain angular arch?
+2 How filie structure of angular?
+3 How application flows ?
+
+
+
+
+
+
+
+
+
+
+
+
