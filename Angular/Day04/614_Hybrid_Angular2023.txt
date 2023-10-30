@@ -1,0 +1,115 @@
+Last Lecture 
+1 Discussion on Test
+2 Angular Arch. Overview
+	- Angular is component orientated arch.
+	- component 
+		1 view file => .html => 1
+		2 stylesheet file => .css => multiple 
+		3 component => .ts file  => 1 
+		4 testing file => .spec.ts 
+		
+		- it has metadata=> It holds extra information about components
+		@Component({
+			selector:''
+			templateUrl:'./...',
+			StyleUrls:'..'
+		})
+	- data binding
+	 - it flows a data from component file to view file 
+	 - It is one directiuon data flow so it is called one way data binding
+	1 String interpolation
+	2 Property Binding
+	3 Style binding
+	4 class binding
+ - Event Binding
+	- it flows a data/http request  from view to component
+	- data is flow in one way direction 
+	- click,change, k/b,mouse event, custom event 
+ - Directives
+	- it change / manipulate the behaviour or your dom Structor dynamically 
+	- 1 Attribute 
+		ngStyle,ngClass..
+	  2 component 
+		..<router-outlet>
+		
+	  3 structural dirctive
+		*ngIf,*ngFor,...
+	  4 event directive
+ - AppModule =>
+	- It is module file 
+	- It has one root module => AppModule 
+	- it has multiple custom module is present.
+ 	
+	1 declartion
+		- To register a component
+		- to create its factory class 
+	2 import 
+		- to register ur module 
+		- or if u want use inbuild angular module 
+	3 Services => provider
+		- it is simple class 
+		- it write a BL
+		- code maintain
+		- reuse
+		- DI => it is key to used service effectively 
+		
+	4 routing
+		- It is used to navigate from one component to another 
+		- u can send a data from one to other 
+		- u can apply security 
+		- u can used lazy loading 
+  - Injector 
+	- It is used For DI 
+	- u can register any 3rd party services/module
+	- In built angular service/module u can inject 
+	
+3 File Structure
+	package.json
+	Angular.json 
+	assets
+	environment 
+	app =>
+		src => 
+			app.module 
+			app.component.ts
+			app.component.html
+			app.component.css 
+			
+4 Angular Application Flow
+
+
+summary & Interview Questions
+1 Explain angular arch?
+2 How filie structure of angular?
+3 How application flows ?
+
+Today Lecture
+1 Create Component manually
+2 Create Component through cli 
+3 Data Binding
+	- Data flow form component to View
+	- Data flow from one direction so it is called one way direction .
+	
+4 String Interpolation
+5 Property Binding
+6 Difference between property Binding & string interpolation
+
+summary & Interview Questions
+1 How many ways to implement CSS?
+2 How many ways to apply CSS 
+3 Explain the Selector in css ? 
+4 Difference between property Binding & string interpolation
+5 How to create component manually?
+6 what is string interpolation? 
+7 What is property Binding?
+
+
+
+
+<h1>Hello</h1>
+
+
+
+
+
+
