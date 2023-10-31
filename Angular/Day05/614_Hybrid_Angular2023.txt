@@ -1,0 +1,137 @@
+Last Lecture 
+1 Create Component manually
+	emolyee.component.ts
+		
+	@Component({
+		selector:'app-employee',
+		templateUrl:'./emolyee.component.html',
+		styleUrls:['./emolyee.component.css']
+	})
+	export class EmployeeComponent{
+	...
+	}
+	
+	app.module.ts
+	declaration:[
+		EmployeeComponent
+	]
+	
+	emolyee.component.html
+	<h1> ...</h1>
+	emolyee.component.css
+	
+	app.component.html
+	<app-employee></app-employee>
+	
+2 Create Component through cli 
+	ng g c student
+	emolyee.component.html
+	<app-student></app-student>
+3 Data Binding
+	- Data flow form component to View
+	- Data flow from one direction so it is called one way direction .
+	
+4 String Interpolation
+	<h1> {{name}}</h1>
+	<img src="{{imgurl}}">
+	<div> {{num+num}}</div>
+	
+	.ts 
+	
+	name:string='..'
+	imgurl:string='../../assets/bg4.jpg';
+	num:number=4;
+	
+	.css
+	img{
+		width:250px;
+		height:250px;
+	}
+	
+5 Property Binding
+	<input [value]="name">
+	<img [src]="imgurl">
+	
+	.ts 
+	name:string='';
+	imgurl:string='...';
+6 Difference between property Binding & string interpolation
+
+	<div hidden=" {{isShow}}">.....
+	
+	<div [hidden]="isShow">.....
+
+.ts 
+isShow:boolean=false;
+
+summary & Interview Questions
+1 How many ways to implement CSS?
+2 How many ways to apply CSS 
+3 Explain the Selector in css ? 
+4 Difference between property Binding & string interpolation
+5 How to create component manually?
+6 what is string interpolation? 
+7 What is property Binding?
+
+
+
+Today Lecture
+1 Style Binding
+2 Class Binding
+
+Hw Task
+1 Apply ternary operator for class Binding
+
+summary & Interview Questions
+1 What is Style Binding
+	
+	<h2 [style.color]='mycolor' > ...
+	<h2 [style.color]=rating<4?'red':'green'">
+	.ts file
+	mycolor:string='red';
+	rating:number=2;
+	
+	
+	
+2 What is class Binding
+	
+3 How we can apply style binding on condition?
+4 How we can apply multiple css property?
+	ngStyle => Attribute directive 
+	
+	<div [ngStyle]="jsonObj">...
+	
+	.ts 
+	
+	jsonObj={
+		color:'red',
+		fontFamily:...,
+		'font-size':...
+	}
+	
+ 5 How we can apply class binding?
+  [class]="myclass"
+  .ts 
+  myclass:string='success';
+  
+ 6 How we can apply class bionding on condition?
+	[class.danger]="rating<4"
+	[class.warning]="rating>4"
+7 Can we apply multiple css classess?
+	ngClass
+	[ngClass]=""
+	.ts 
+	
+	jsonObj={
+		'success':!this.isError,
+		'danger':this.isError,
+		'special':this.isSpecial
+	}
+
+
+
+
+
+
+
+  
