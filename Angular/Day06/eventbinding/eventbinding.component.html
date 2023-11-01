@@ -1,0 +1,40 @@
+<p>eventbinding works!</p>
+
+<!-- syntax
+    (eventname)="eventHandler"
+
+-->
+
+<button (click)="onClick()" >Click</button>
+<br><br>
+<img class="myimg" (click)="onImage()" title="Click on Image" src="../../assets/bg4.jpg" alt="">
+<hr>
+
+<!-- $event
+    - It is special variable given by angular
+    - It gives current dom element information
+    - that information is in json format 
+    - u can access its information in ts file 
+-->
+
+<button value="Doller info..." (click)="ondollerInfo($event)" >Current DOM Element Info</button>
+<br><br>
+<!-- 
+    template ref variable
+    - It gives dom element information
+    - it hold the handle/Object of dom element 
+    - u can manipulate the behaviour as well as data  of element
+    - u have use #templaterefname(user defined)
+    - u can apply any html tag
+-->
+<hr>
+<input #inputname type="text" placeholder="Enter the name">
+<br><br>
+<button (click)="onSend(inputname)" >Send</button>
+<hr>
+
+
+<input #inputname1 type="text" placeholder="Enter the name">
+<br><br>
+<button (click)="onSend1(inputname1.value)" >Send</button>
+

@@ -1,0 +1,106 @@
+Last Lecture 
+1 Style Binding
+	
+	
+2 Class Binding
+
+Hw Task
+1 Apply ternary operator for class Binding
+
+summary & Interview Questions
+1 What is Style Binding
+	
+	<h2 [style.color]='mycolor' > ...
+	<h2 [style.color]=rating<4?'red':'green'">
+	.ts file
+	mycolor:string='red';
+	rating:number=2;
+	
+	
+	
+	
+2 What is class Binding
+	
+3 How we can apply style binding on condition?
+4 How we can apply multiple css property?
+	ngStyle => Attribute directive 
+	
+	<div [ngStyle]="jsonObj">...
+	
+	.ts 
+	
+	jsonObj={
+		color:'red',
+		fontFamily:...,
+		'font-size':...
+	}
+	
+ 5 How we can apply class binding?
+  [class]="myclass"
+  .ts 
+  myclass:string='success';
+  <h2 [class.danger]="rating<4"
+	  [class.warning]="rating>4" 	> ...
+  .ts 
+  rating:number=21;
+  
+ 6 How we can apply class bionding on condition?
+	[class.danger]="rating<4"
+	[class.warning]="rating>4"
+7 Can we apply multiple css classess?
+	ngClass
+	[ngClass]="jsonObj"
+	.ts 
+	
+	isError:boolean=true;
+	isSpecial:boolean=true;
+	jsonObj={
+		'success':!this.isError,
+		'danger':this.isError,
+		'special':this.isSpecial
+	}
+
+
+Today Lecture
+1 Event Binding
+	- data flow from view to component
+	- It is called one way data direction so it is called one way data binding 
+	(click)="eventHandler()"
+2 Click event
+	- U can apply any html tag 
+	
+3 $event
+4 template ref variable 
+
+summary & Interview Questions
+
+1 What is event Binding?
+2 How to apply event on any html element?
+	(click)="onClick()"
+	.ts 
+	onClick(){
+	....
+	}
+3 What is $event?
+	<button (click)="onDoller($event)">
+	
+	.ts 
+	onDoller(myevent:any){
+	....
+	myevent.target.value
+	}
+4 What is DOM?
+5 what is template ref variable?
+	#name
+	<input #myname>
+	<button (click)="onSend(myname)">
+	.ts 
+	onSend(name:any){
+		name.value 
+		name.style.background='..'
+	}
+6 Difference between $event & template ref variable?
+
+
+
+  
