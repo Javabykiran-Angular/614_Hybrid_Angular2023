@@ -1,0 +1,21 @@
+<p>eventbinding1 works!</p>
+
+<input #num1 type="text" placeholder="Enter the Number1"><br><br>
+<input #num2 type="text" placeholder="Enter the Number2"><br><br>
+<button (click)="onAddition(num1.value,num2.value)" >Addition</button><br><br>
+<input [value]="res" type="text" placeholder="Result">
+<hr>
+<!-- change event
+
+-->
+
+<input #myname type="text" (change)="onChange(myname.value)" placeholder="enter the name">
+<hr>
+<input type="text" (keyup)="onKeyUp()" placeholder="key Up event...">
+<hr>
+<input #inputkeydown type="text" (keydown)="onKeyDown(inputkeydown.value)" placeholder="key down event...">
+<hr>
+<button (click)="adds=8+8" >Addition</button> &nbsp;&nbsp; {{adds}}
+<hr>
+
+<input type="text"  [(ngModel)]="name" placeholder="Enter the name" > {{name}}

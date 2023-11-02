@@ -1,0 +1,165 @@
+Last Lecture 
+1 Event Binding
+	- data flow from view to component
+	- It is called one way data direction so it is called one way data binding 
+	(click)="eventHandler()"
+	
+	<button (click)="onClick()">
+	<img src="..." (click)="onImage()">
+	.ts 
+	count:number=0;
+	onClick(){
+		if(this.count==0){
+		console.log("...");
+		this.count++;
+		}
+		
+	}
+	
+	onImage(){
+	...
+	}
+	
+2 Click event
+	- U can apply any html tag 
+	
+3 $event
+	<button (click)="onClick($event)">
+	.ts file
+	onClick(myevent:any){
+		....
+		myevent.target.value
+	}
+
+4 template ref variable 
+	
+	<input #inputname>
+	<button (click)="onClick(inputname)">
+	
+	<input #inputname1>
+	<button (click)="onClick1(inputname1.value)">
+	
+	
+	.ts file
+	onClick(myname:any){
+		....
+		myname.value;
+		myevent.style.background='green';
+		myevent.style.color='white';
+	}
+	
+	onClick1(myvalue:any){
+		console.log(myvalue);
+	}
+
+
+summary & Interview Questions
+
+1 What is event Binding?
+2 How to apply event on any html element?
+	(click)="onClick()"
+	.ts 
+	onClick(){
+	....
+	}
+3 What is $event?
+	<button (click)="onDoller($event)">
+	
+	.ts 
+	onDoller(myevent:any){
+	....
+	myevent.target.value
+	}
+4 What is DOM?
+5 what is template ref variable?
+	#name
+	<input #myname>
+	<button (click)="onSend(myname)">
+	.ts 
+	onSend(name:any){
+		name.value 
+		name.style.background='..'
+	}
+6 Difference between $event & template ref variable?
+
+Today Lecture
+1 Real time Example
+
+	<input #num1>
+	<input #num2>
+	<button (click)="onAddition(num1.value,num2.value)">
+	<input [value]="res">
+	.yts file
+	onAddition(num1:any,num2:any){
+		
+		let n1=+num1;
+		let n2=+num2;
+	
+		this.res=n1+n1;
+	}
+
+2 change event
+	<input (change)="onChange()">
+	.ts file
+	onChange(){
+	....
+	}
+3 Keyboard event 
+	1 keyup
+	
+	2 keydown
+	
+4 event binding without event handler
+	 - If u want perform one line logic then we can use it 
+		
+		<button (click)="res=8+8">{{res}}
+		
+5 Two way data binding
+	- ngModel
+	- it is attribute directive 
+	- its update ur data dynamically 
+	- u have import pre defined module => FormsModule=> app.module.ts file 
+		=> import section 
+	- we use bannainthbox
+		[(ngModel)]="propertyname"
+		
+		<input [(ngModel)]="name">{{name}}
+		
+		.ts 
+		name:string='';
+
+ summary & Interview Questions
+  
+1 How to access input box data in the ts file?
+2 How to use change event with template ref variable?
+3 Explain K/B event
+4 how to do event binding without event handler?
+5 What is two way data binding ?
+6 Explain ngModel?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
