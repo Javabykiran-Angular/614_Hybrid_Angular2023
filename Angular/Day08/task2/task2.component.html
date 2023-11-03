@@ -1,0 +1,9 @@
+<p>task2 works!</p>
+<!-- Find square & cube of number on click event use as radio button.Take number from end user & display the result in another text box, square & cube respectively.
+4 Problem statement -->
+
+<input #num type="number" placeholder="Enter the Number"> <br><br>
+
+<input (click)="onSquare(num.value)" type="radio" name="operation">Square
+<input (click)="onCube(num.value)" type="radio" name="operation">Cube <br><br>
+<input [value]="result" type="text" placeholder="Result">

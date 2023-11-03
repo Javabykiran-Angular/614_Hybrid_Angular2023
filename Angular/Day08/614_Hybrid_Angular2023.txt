@@ -1,0 +1,98 @@
+Last Lecture 
+1 Real time Example
+
+	<input #num1>
+	<input #num2>
+	<button (click)="onAddition(num1.value,num2.value)">
+	<input [value]="res">
+	.yts file
+	onAddition(num1:any,num2:any){
+		
+		let n1=+num1;
+		let n2=+num2;
+	
+		this.res=n1+n1;
+	}
+
+2 change event
+	<input (change)="onChange()">
+	.ts file
+	onChange(){
+	....
+	}
+3 Keyboard event 
+	1 keyup
+	
+	2 keydown
+	
+4 event binding without event handler
+	 - If u want perform one line logic then we can use it 
+		
+		<button (click)="res=8+8">{{res}}
+		
+5 Two way data binding
+	- ngModel
+	- it is attribute directive 
+	- its update ur data dynamically 
+	- u have import pre defined module => FormsModule=> app.module.ts file 
+		=> import section 
+	- we use bannainthbox
+		[(ngModel)]="propertyname"
+		
+		<input [(ngModel)]="name">{{name}}
+		
+		.ts 
+		name:string='';
+
+ summary & Interview Questions
+  
+1 How to access input box data in the ts file?
+2 How to use change event with template ref variable?
+3 Explain K/B event
+4 how to do event binding without event handler?
+5 What is two way data binding ?
+6 Explain ngModel?
+
+Today Lecture
+1 Task Checking
+2 Problem statement
+ On click event change background color, text color of div tag text
+3 Problem statement
+Find square & cube of number on click event use as radio button.Take number from end user & display the result in another text box, square & cube respectively.
+4 Problem statement
+Apply Class Binding to button, when button on click to change text style to italic & text color should be change.
+5 Problem statement HW
+Set image to div on click on button.
+
+summary & Interview Questions
+1 Problem statement
+ On click event change background color, text color of div tag text
+2 Problem statement
+Find square & cube of number on click event use as radio button.Take number from end user & display the result in another text box, square & cube respectively.
+3 Problem statement
+Apply Class Binding to button, when button on click to change text style to italic & text color should be change.
+4 Problem statement
+Set image to div on click on button.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
