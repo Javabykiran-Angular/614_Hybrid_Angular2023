@@ -1,0 +1,134 @@
+Last Lecture Agenda
+1 Task Checking
+2 Problem statement
+ On click event change background color, text color of div tag text
+	<div #mydiv (click)="onDiv(mydiv)" >
+		ffggg
+	</div>
+	
+	.ts file 
+	onDiv(mydiv:any){
+		mydiv.style.background='green';
+		mydiv.style.color='white';
+		
+	}
+ 
+3 Problem statement
+Find square & cube of number on click event use as radio button.Take number from end user & display the result in another text box, square & cube respectively.
+	
+	<input #num1>
+	<input (click)="onSquare(num1.value)" type="radio" name="operation">Square
+	<input (click)="onCube(num1.value)" type="radio" name="operation">Cube
+	<input type="text" [value]="result" >
+	
+	.ts file 
+	onSquare(num:any){
+		let n1=+num;
+		this.result=n1*n1;
+	}
+	onCube(num:any){
+		let n1=+num;
+		this.result=n1*n1*n1;
+	}
+
+4 Problem statement
+Apply Class Binding to button, when button on click to change text style to italic & text color should be change.
+
+	.css 
+	myclass{
+		font-style:'italic',
+		color:'red'
+	}
+	
+	<button [class]="propClass" (click)="onClick()"> Send data
+
+.ts file 
+		propClass:string='';
+		onClick(){
+			this.propClass='myclass';
+		}
+
+5 Problem statement HW
+Set image to div on click on button.
+	
+summary & Interview Questions
+1 Problem statement
+ On click event change background color, text color of div tag text
+2 Problem statement
+Find square & cube of number on click event use as radio button.Take number from end user & display the result in another text box, square & cube respectively.
+3 Problem statement
+Apply Class Binding to button, when button on click to change text style to italic & text color should be change.
+4 Problem statement
+Set image to div on click on button.
+
+
+Today's Lecture Agenda
+1 Task Completion Status
+2 Component Interaction
+	pre-requiest
+	1 Parent-child relationship is required 
+	
+3 @Input decorator
+	- if u want send data from parent component to child component
+	- It is property level decorator
+4 @Output decorator
+	- if u want send data from child component to parent component
+	- It is property level decorator
+	
+Task 
+1 Send array of object  from parent component to child component
+2 Send array type of data from parent component to child component
+
+summary & Interview Questions
+
+1 What is component interaction?
+	- to send data from one component to another component & vice versa
+	- To perform component interaction we have ensure parent-child relationship
+	- @input -> send data from parent to child
+	- @Output -> send data from child to parent
+2 What is use of @Input Decorator?
+	- send data from parent to child
+	- It is property level decorator
+	- that property is created in child component
+	
+3 How to use @Input Decorators
+	
+	parent1.component.html
+	
+	<app-child1 [parentStrdata]="strData" ></app-child1>
+	
+	parent1.ts
+	
+	strData:string='.....';
+	
+	child1.ts
+	
+	@Input() parentStrdata:string='';
+	
+	child1.html
+	
+	<h2> {{parentStrdata}}</h2>
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
