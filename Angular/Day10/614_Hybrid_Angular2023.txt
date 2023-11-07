@@ -1,0 +1,170 @@
+Last Lecture Agenda
+1 Task Completion Status
+2 Component Interaction
+	pre-requiest
+	1 Parent-child relationship is required 
+	
+3 @Input decorator
+	- if u want send data from parent component to child component
+	- It is property level decorator
+4 @Output decorator
+	- if u want send data from child component to parent component
+	- It is property level decorator
+	
+	ng g c parent1 
+	ng g c child1 
+	
+	app.component.html
+	<app-parent>
+	
+	parent.ts
+	strMsg:string='...';
+	jsonObj={
+		id:9,
+		fname:'...'
+	}
+	num1:number=0;
+	
+	onClick(){
+		this.num1=9;
+	}
+	
+	parent.html
+	
+	<button (click)="onClick()">
+	
+	<app-child1 [parentStrMsg]="strMsg"
+		[parentJsonObj]="jsonObj"
+		[parentnumData]="num1"
+	>
+	
+	child1.ts
+	@Input() parentStrMsg:string='';
+	@Input() parentJsonObj:any={};
+	@Input() parentnumData!:number;
+	
+	child1.html
+	<h2> {{parentStrMsg}}</h2>
+	<h2>{{parentJsonObj.id}}</h2>
+	<h2> {{parentJsonObj.fname}}</h2>
+	<h2> {{parentnumData}}</h2>
+	
+	
+Task 
+1 Send array of object from parent component to child component
+2 Send array type of data from parent component to child component
+
+summary & Interview Questions
+
+1 What is component interaction?
+	- to send data from one component to another component & vice versa
+	- To perform component interaction we have ensure parent-child relationship
+	- @input -> send data from parent to child
+	- @Output -> send data from child to parent
+2 What is use of @Input Decorator?
+	- send data from parent to child
+	- It is property level decorator
+	- that property is created in child component
+	
+3 How to use @Input Decorators
+	
+	parent1.component.html
+	
+	<app-child1 [parentStrdata]="strData" ></app-child1>
+	
+	parent1.ts
+	
+	strData:string='.....';
+	
+	child1.ts
+	
+	@Input() parentStrdata:string='';
+	
+	child1.html
+	
+	<h2> {{parentStrdata}}</h2>
+
+
+Today's Lecture Agenda
+1 Structural Directive
+	- it manipulate ur dom Structure behaviour dynamically 
+	1 *ngIf
+		- it checks ur condition and according condition it render or display ur data 
+	2 *ngFor 
+		- if u want iterate dynamically then we use *ngFor 
+	3 *ngSwitch
+		- if u want execute a specific functionality/ condition 
+	   
+	
+2 if directive
+ng-template => It is component directive 
+3 for directive
+	 if u want iterate dynamically then we use *ngFor 
+	 
+Task 
+1 Apply table broder using CSS
+	 
+summary & Interview Questions
+1 What is structural directive?
+2 How to use *ngIf directive?
+		
+	<div *ngIf="rating<4;else elsepart">
+		<h2>....
+	</div>
+	
+	<ng-template #elsepart>
+			....
+	</ng-template>
+	
+	.ts 
+	rating:number=21;
+	
+3 How to use *ngFor directive?
+	.ts file 
+	arrobj=[
+		{
+			id:..,
+			name:..
+		},
+		{
+		...
+		}
+	]
+	
+	.html
+	
+	<table >
+		<thead>
+			<th>...
+		</thead>
+		<tbody>
+			<tr *ngFor="let item of arrobj;index as i">
+				<td> {{item.id}}</td>
+				<td> {{item.name}}</td>
+				....
+			</tr>
+		</tbody>
+	</table>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
