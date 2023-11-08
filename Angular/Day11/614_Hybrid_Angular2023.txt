@@ -1,0 +1,158 @@
+Last Lecture Agenda
+1 Structural Directive
+	- it manipulate ur dom Structure behaviour dynamically 
+	1 *ngIf
+		- it checks ur condition and according condition it render or display ur data 
+	2 *ngFor 
+		- if u want iterate dynamically then we use *ngFor 
+	3 *ngSwitch
+		- if u want execute a specific functionality/ condition 
+	   
+	
+2 if directive
+	<div *ngIf="rating<4;else elsepart">
+		...
+	</div>
+	
+	<ng-template #elsepart>
+	.....
+	</ng-template>
+	.ts 
+	rating:number=21;
+
+ng-template => It is component directive 
+3 for directive
+	 if u want iterate dynamically then we use *ngFor 
+	 
+Task 
+1 Apply table broder using CSS
+	 
+summary & Interview Questions
+1 What is structural directive?
+2 How to use *ngIf directive?
+		
+	<div *ngIf="rating<4;else elsepart">
+		<h2>....
+	</div>
+	
+	<ng-template #elsepart>
+			....
+	</ng-template>
+	
+	.ts 
+	rating:number=21;
+	
+3 How to use *ngFor directive?
+	.ts file 
+	
+	course:string[]=[...];
+	
+	
+	arrobj=[
+		{
+			id:..,
+			name:..
+		},
+		{
+		...
+		}
+	]
+	
+	.html
+	
+	<ul>
+		<li *ngFor="let item of course">{{item}}</li>
+	</ul>
+	
+	<table >
+		<thead>
+			<th>...
+		</thead>
+		<tbody>
+			<tr *ngFor="let item of arrobj;index as i">
+				<td> {{item.id}}</td>
+				<td> {{item.name}}</td>
+				....
+			</tr>
+		</tbody>
+	</table>
+	
+
+
+Today's Lecture Agenda
+1 Mouse Event
+	1 mouseover
+	2 mouseout
+2 Real time task => To highlight the table row when it is  ouse pointer on it otherwise don't highlight
+3 Output decorator
+	- to send data from child to parent 
+	- To implement this things we have create a custom event 
+	- Bind that custom event in parent html file 
+	
+Task 
+1 Send Json object data from child to parent 
+
+
+	<tr (mouserver)="onMouseOver(item)"
+		(mouseout)="onMouseOut()"
+	[ngClass]="{
+		'highlight': selected==item.name 
+	}"
+
+.ts file 
+onMouseOver(item:any){
+	this.selected=item.name;
+	
+}
+
+onMouseOut(){
+	this.selected='';
+}
+
+.css 
+.highlight{
+...
+} 
+
+child.ts 
+@Output() childstrEvent=new EventEmitter();
+
+onSend(){
+	this.childstrEvent.emit(this.strmsg)
+}
+
+parent.ts 
+strmsg:string='';
+
+parent.html
+<h2>{{strmsg}}</h2>
+
+<app-child2 (childstrEvent)="strmsg=$event"
+
+summary & Interview Questions
+1 what is mouse event?
+2 How to highlight the row & disselect the row?
+3 How to use output decorator?
+4 How to send data from child to parent?
+5 How to create custom event? 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
