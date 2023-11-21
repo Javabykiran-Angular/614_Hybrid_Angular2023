@@ -1,0 +1,60 @@
+Last Lecture Agenda
+1 Revision of Topic
+
+summary & Interview Questions
+1 Not Allowed For this Session Revise a Topic after diwali vacation 
+
+Today's Lecture Agenda
+1 ngSwitch directive
+ - It is also a structural directive 
+ - *ngIf 
+ - *ngFor
+
+summary & Interview Questions
+	
+	<input #inputcolorname >
+	<button (click)="onSend(inputcolorname.value)" >
+	
+	<div [ngSwitch]="choice">
+	
+		<div *ngSwitchCase="'red'" 
+			[style.background]="choice"
+		>
+			...
+		</div>
+		....
+		<div *ngSwitchDefault 
+			[ngStyle]=" {
+				'background':choice===''?'black':'orangae',
+				'color':choice===''?'white':'black'
+			} 
+		>....</div>
+	
+	</div>
+	
+	.ts 
+	onSend(mycolor:string){
+		this.choice=mycolor.toLowerCase().trim();
+		
+	}
+	
+1 How ngSwitch directive work?
+2 What is structural directive? 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
