@@ -1,0 +1,77 @@
+Last Lecture Agenda
+1 ngSwitch directive
+ - It is also a structural directive 
+ - *ngIf 
+ - *ngFor
+
+summary & Interview Questions
+	
+	<input #inputcolorname >
+	<button (click)="onSend(inputcolorname.value)" >
+	
+	<div [ngSwitch]="choice">
+	
+		<div *ngSwitchCase="'red'" 
+			[style.background]="choice"
+		>
+			Your color name is {{choice}}
+		</div>
+		....
+		<div *ngSwitchDefault 
+			[ngStyle]=" {
+				'background':choice===''?'black':'orangae',
+				'color':choice===''?'white':'black'
+			} 
+		>....</div>
+	
+	</div>
+	
+	.ts 
+	onSend(mycolor:string){
+		this.choice=mycolor.toLowerCase().trim();
+		
+	}
+	.css
+	div{
+		width:350px;
+		height:250px;
+	}
+	
+1 How ngSwitch directive work?
+2 What is structural directive? 
+
+
+Today's Lecture Agenda
+1 Pipe
+	- it transform ur data to the end user without chnaging its original value 
+2 Inbuild Pipe 
+3 @Pipe 
+
+
+summary & Interview Questions
+
+	string => lowercase,uppercase,titlecase,slice:0:20
+	percent => percent:'1.1'
+	currency => currency:'INR':'code'
+	number=> number:'1.2-3'
+	date => date : 'mediumDate',date: 'shortDate',date:'dd-MM-yyyy',
+			date:'longDate'
+	chaining pipe  => date: 'longDate'| uppercase
+
+1 What is Pipe in Angular?
+2 How to Use Inbuild pipe?
+3 Explain pipe in Angular?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
