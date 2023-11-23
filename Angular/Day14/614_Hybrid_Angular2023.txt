@@ -1,0 +1,104 @@
+Last Lecture Agenda
+1 Pipe
+	- it transform ur data to the end user without chnaging its original value 
+2 Inbuild Pipe 
+
+
+
+summary & Interview Questions
+
+	string => lowercase,uppercase,titlecase,slice:0:20
+	
+		<h2> {{strdata | lowercase}}</h2>
+		<h2> {{strdata | uppercase}}</h2>
+		<h2> {{strdata | tiltecase}}</h2>
+		<h2> {{strdata | slice:0:20}}</h2>
+	
+	percent => percent:'1.1'
+	
+	<h2> {{0.25 | percent}}</h2>
+	<h2> {{0.025 | percent:'1.1'}}</h2>
+	<h2> {{0.091 | percent:'2.2'}}</h2>
+	
+	currency => currency:'INR':'code'
+	
+	<h2> {{0.25 | currency}}</h2>
+	<h2> {{0.25 | currency:'INR'}}</h2>
+	<h2> {{0.25 | currency:'INR':'code'}}</h2>
+	
+	number=> number:'1.2-3'
+	
+	<h2> {{5.6784569 | number:'1.2-3'|currency}}</h2>
+	<h2> {{5.6785569 | number:'1.2-3'}}</h2>
+	<h2> {{5.6784569 | number:'2.2-3'}}</h2>
+	
+	date => date : 'mediumDate',date: 'shortDate',date:'dd-MM-yyyy',
+	.ts 
+	mydate=new Date();
+	
+	<h2> {{mydate | date:'mediumDate'}}</h2>
+	<h2> {{mydate | date:'shortDate'}}</h2>
+	<h2> {{mydate | date:'dd-MM-yyyy'}}</h2>
+	<h2> {{mydate | date:'longDate'}}</h2>
+	
+			date:'longDate'
+	chaining pipe  => date: 'longDate'| uppercase
+	<h2> {{mydate | date:'longDate'|uppercase}}</h2>
+
+1 What is Pipe in Angular?
+2 How to Use Inbuild pipe?
+3 Explain pipe in Angular?
+
+
+Today's Lecture Agenda
+1 Custom Pipe 
+2 @Pipe 
+	=> Decorator
+	=> it is class Level decorator
+3 PipeTransform
+	=> It is interface 
+4 transform()
+	-> implement transform method => u can write ur custom pipe logic 
+5 Conduct test on jbktest.com
+
+summary & Interview Questions
+	
+	ng g c customPipe
+	
+	.html
+	<h2> {{strDetails | summary}}</h2>
+	<h2> {{strDetails | summary:0:50}}</h2>
+	
+	utility=> summary.pipe.ts
+	
+	@Pipe({
+		name:'summary'
+	})
+	export class SummaryPipe implement PipeTransform{
+		transform(value:any,start:numbre=0,end:number=20){
+		
+			let temp=(<string>value );
+			return (temp.substring(start,end)+"...");
+		}
+	}
+	
+	app.module.ts 
+	SummaryPipe
+	
+	Conduct test on jbktest.com
+
+1 What is use of @Pipe?
+2 How to implement Custom Pipe?
+3 What is use of PipeTransform?
+4 Why we use transform method?
+
+
+
+
+
+
+
+
+
+
+
