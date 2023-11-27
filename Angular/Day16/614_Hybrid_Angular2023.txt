@@ -1,0 +1,169 @@
+Last Lecture Agenda
+1 What it is Services?
+	- It is a Simple class 
+2 What is use of Service?
+	- it is used for code maintainabilty
+	- It is used for code reuseabilty 
+	- It is used to write ur Business Logic 
+	- It is used to connect ur backend server 
+	- It is used to provide isolation to ur component from http end point URL 
+3 How to Use Dependancy Injection
+4 Where to use Service?
+
+summary & Interview Questions
+
+export class CourseService{
+	private course:string[]=[....]'
+	
+	getCourse(){
+		return this.course;
+	}
+}
+
+course.cpmponent.ts
+mycourse:string[]=[];
+constructor(private service:CourseService){
+	//let service=new CourseService();
+	 //this.mycourse=service.getCourse();
+}
+
+ngonInit(){
+	this.mycourse=this.service.getCourse();
+}
+
+app.module.ts
+provider:[CourseService]
+
+.html
+<ol>
+	<li *ngFor="let item of mycourse">
+		{{item}}</li>
+</ol>
+
+
+1 What it is Services?
+2 What is use of Service?
+3 How to Use Dependancy Injection
+4 Where to use Service?
+
+Today's Lecture Agenda
+1 Http Protocol
+	- it is set of Rule 
+2 Http Methods
+	1 get => To fetch the data from backend server 
+	2 post => To send the data from frontend server to backend server 
+	3 put => To update a particular data 
+	4 delete => to delete a particular data 
+	
+	Http Request
+	It has two parts 
+	1 Http Header
+		- http end point url 
+		- method name 
+		- ip
+		- date,time 
+		- content-Type=> Application-content
+			1 image
+			2 text/html
+			3 excel sheet/pdf/file 
+		- port number
+		
+		
+	2 Http Body
+		- Data
+			- html/text  
+			- json
+			- xml format => it is outdated 
+	Http Response
+	1 Http Header
+		- http end point url 
+		- method name 
+		- ip
+		- date,time 
+		- content-Type=> Application-content
+			1 image
+			2 text/html
+			3 excel sheet/pdf/file 
+		- port number
+		- status code 
+			1 2xx => 200-299 => success,ok 
+			2 3xx => 300-399 => redirection
+			3 4xx => 400-499 => client side 
+			5 5xx => 500-599 => server side 
+		
+	2 Http Body
+		- Data
+			- html/text  
+			- json
+			- xml format => it is outdated 	
+	
+3 HttpClientModule
+	- It is predefined angular module 
+	- we have to register that module in app.module.ts file in import section 
+4 Connect Angular with Spring Boot
+	1 create a service 
+	2 write a BL in that service 
+	3 Create a dependancy injection in our component
+Api Http end point url =>
+	
+	http://localhost:8080/getstudent
+	
+5 @Injector
+6 Observabale
+
+ summary & Interview Questions
+ 
+ ng g s http
+ 
+ @Injectable({
+	provideIn:"root"
+ })
+ export class HttpService{
+	
+	url:string='http://localhost:8080/api/student';
+	
+	constructor(private http:HttpCilent){}
+	
+	getStudentRecord(){
+		return this.http.get(this.url)
+	}
+	
+ }
+ 
+ 
+ studentData.ts
+ studentData:any[]=[];
+ constructor(private service:HttpService){}
+ 
+ ngOnInit(){
+	this.service.getStudentRecord()
+	.subscribe((response:any)=>{
+		this.studentData=response;
+	})
+ }
+ 
+ .html 
+ 
+ <table>
+	<thead>
+		<th>...
+	</thead>
+	<tbody>
+		<tr *ngFor="let item of studentData">
+			<td> {{item.id}}</td>
+			<td> {{item.name}}</td>
+			<td> {{item.phoneno}}</td>
+		</tr>
+ 
+ 
+ 1 Which are Http Methods?
+ 2 How to connect Angular with backend server?
+ 3 Write down the steps to connect your backend server?
+ 4 Explain the Observabale?
+ 5 What is Observabale?
+ 
+
+
+
+
+

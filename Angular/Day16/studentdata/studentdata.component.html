@@ -1,0 +1,16 @@
+<p>studentdata works!</p>
+
+<table border="1px">
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Phone No</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of studentData">
+            <td> {{item.id}} </td>
+            <td> {{item.name}} </td>
+            <td> {{item.phoneno}} </td>
+        </tr>
+    </tbody>
+</table>
