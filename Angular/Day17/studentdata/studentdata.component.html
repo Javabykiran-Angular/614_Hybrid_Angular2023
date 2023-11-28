@@ -1,0 +1,41 @@
+<p>studentdata works!</p>
+
+<label for="">Name::&nbsp;&nbsp; </label>
+<input #inputname type="text" placeholder="Enter the Name "><br><br>
+<label for="">Phone no::&nbsp;&nbsp; </label>
+<input #inputno type="number" placeholder="Enter the Phone no "><br><br>
+<button (click)="onSubmit(inputname.value,inputno.value)" >Submit</button>
+
+<hr>
+
+    <div [hidden]="isHidden">
+        <label for="">ID :: &nbsp;&nbsp;</label>
+        <input [(ngModel)]="myid" type="text" placeholder="Enter the ID" readonly><br><br>
+        <label for="">Name :: &nbsp;&nbsp;</label>
+        <input [(ngModel)]="myname" type="text" placeholder="Enter the Name"><br><br>
+        <label for="">Phone No  :: &nbsp;&nbsp;</label>
+        <input [(ngModel)]="myphoneno" type="text" placeholder="Enter the Phone No "><br><br>
+        <button (click)="onupdate()" >Update</button>
+
+    </div>
+
+<hr>
+
+<table border="1px">
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Phone No</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of studentData">
+            <td> {{item.id}} </td>
+            <td> {{item.name}} </td>
+            <td> {{item.phoneno}} </td>
+            <td><button (click)="onEdit(item)" >Edit</button>
+                <button (click)="onDelete(item.id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

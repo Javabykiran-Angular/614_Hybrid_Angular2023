@@ -1,0 +1,131 @@
+Last Lecture Agenda
+1 Http Protocol
+	- it is set of Rule 
+2 Http Methods
+	1 get => To fetch the data from backend server 
+	2 post => To send the data from frontend server to backend server 
+	3 put => To update a particular data 
+	4 delete => to delete a particular data 
+	
+	Http Request
+	It has two parts 
+	1 Http Header
+		- http end point url 
+		- method name 
+		- ip
+		- date,time 
+		- content-Type=> Application-content
+			1 image
+			2 text/html
+			3 excel sheet/pdf/file 
+		- port number
+		
+		
+	2 Http Body
+		- Data
+			- html/text  
+			- json
+			- xml format => it is outdated 
+	Http Response
+	1 Http Header
+		- http end point url 
+		- method name 
+		- ip
+		- date,time 
+		- content-Type=> Application-content
+			1 image
+			2 text/html
+			3 excel sheet/pdf/file 
+		- port number
+		- status code 
+			1 2xx => 200-299 => success,ok 
+			2 3xx => 300-399 => redirection
+			3 4xx => 400-499 => client side 
+			5 5xx => 500-599 => server side 
+		
+	2 Http Body
+		- Data
+			- html/text  
+			- json
+			- xml format => it is outdated 	
+	
+3 HttpClientModule
+	- It is predefined angular module 
+	- we have to register that module in app.module.ts file in import section 
+4 Connect Angular with Spring Boot
+	1 create a service 
+	2 write a BL in that service 
+	3 Create a dependancy injection in our component
+Api Http end point url =>
+	
+	http://localhost:8080/getstudent
+	
+5 @Injector
+6 Observabale
+
+ summary & Interview Questions
+ 
+ ng g s http
+ 
+ @Injectable({
+	provideIn:"root"
+ })
+ export class HttpService{
+	
+	url:string='http://localhost:8080/api/student';
+	
+	constructor(private http:HttpCilent){}
+	
+	getStudentRecord(){
+		return this.http.get(this.url)
+	}
+	
+ }
+ 
+ 
+ studentData.ts
+ studentData:any[]=[];
+ constructor(private service:HttpService){}
+ 
+ ngOnInit(){
+	this.service.getStudentRecord()
+	.subscribe((response:any)=>{
+		this.studentData=response;
+	})
+ }
+ 
+ .html 
+ 
+ <table>
+	<thead>
+		<th>...
+	</thead>
+	<tbody>
+		<tr *ngFor="let item of studentData">
+			<td> {{item.id}}</td>
+			<td> {{item.name}}</td>
+			<td> {{item.phoneno}}</td>
+		</tr>
+ 
+ 
+ 1 Which are Http Methods?
+ 2 How to connect Angular with backend server?
+ 3 Write down the steps to connect your backend server?
+ 4 Explain the Observabale?
+ 5 What is Observabale?
+ 
+
+Today's Lecture Agenda
+1 Post method 
+2 put method
+3 delete method
+4 Handling Error 
+
+summary & Interview Questions
+1 How to send data from Angular to backend server?
+2 How to Update any particular data in Angular?
+3 How delete method Works in angular?
+
+
+
+

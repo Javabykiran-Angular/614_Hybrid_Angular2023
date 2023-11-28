@@ -1,0 +1,16 @@
+input{
+    border: 1px solid green;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+button{
+    border: 1px solid green;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 5px;
+}
+button:hover{
+    background: green;
+    color: white;
+}
