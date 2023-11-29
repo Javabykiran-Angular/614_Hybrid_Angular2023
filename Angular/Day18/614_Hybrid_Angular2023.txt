@@ -1,0 +1,85 @@
+Last Lecture Agenda
+1 Post method 
+2 put method
+3 delete method
+4 Handling Error 
+
+summary & Interview Questions
+1 How to send data from Angular to backend server?
+2 How to Update any particular data in Angular?
+3 How delete method Works in angular?
+
+Today's Lecture Agenda
+1 Routing
+	- navigate from one component to another component
+	- we can send a parameter(data)
+2 Routing Steps
+	1 configure the route 
+		app-routing.module.ts
+		const route:Routes[]=[
+			
+			{
+				path:"",component:HomeComponent
+			},
+			
+			{
+				path:'Page1',component:Pag1Component
+			},
+			{
+				path:'Page2/:id',component:Pag2Component
+			},
+			.....
+			
+			{
+				path:"**",component:NotFoundComponent
+			}
+		]
+	2 <router-outlet> => it is component directive 
+		app.component.html
+		
+		<router-outlet>
+	3 establish the link between the component
+	
+	home.ts
+	myid:number=9;
+	
+	home.html
+	<a routerLink="/Page1">Page1</a>
+	<a [routerLink]="['/Page2',myid]">Page2</a>
+	
+	....
+	following.html
+	<button routerLink="/myFollowing">...
+	
+	page2.ts
+	constructor(private route:ActivatatedRoute){}
+	
+	ngOnInit(){
+		this.getDataFromURL();
+	}
+	
+	getDataFromURL(){
+			this.route.paramMap
+			.subscribe((param)=>{
+				console.log(param.get("id"))
+			})
+	}
+	
+	
+3 routerLink
+4 wild cart operator
+5 empty path
+6 send parameter
+
+
+
+summary & Interview Questions
+1 What is Routing?
+2 How to implement routing?
+3 what is purpose of routerLink?
+4 what is use of wild cart operator?
+5 What is empty path?
+
+
+
+
