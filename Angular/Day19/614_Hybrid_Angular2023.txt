@@ -1,0 +1,81 @@
+Last Lecture Agenda
+1 Conducted Test 2 
+
+before Test session 
+	steps
+	1 Configure route 
+		[
+			{
+				path:'',component:HomeComponent
+			},
+			{
+				path:'Page1',component:Page1Component
+			},
+			{
+				path:'Page2/:id',component:Page2Component
+			},
+			...
+			
+			{
+				path:'**',component:notFoundComponent
+			}
+			
+		]
+	2 use router-outlet 
+	
+	app.component.html
+	<router-outlet></router-outlet>
+	3 link establioshed
+	
+	home.ts 
+	myid:number=9;
+	
+		home.html
+		<a routerLink="/Page1"> Page1</a>
+		<a [routerLink]="['/Page2',myid]"> Page2</a>
+		
+		following.html
+		<img routerLink="/Myfollower">
+		<a routerLink="">Home 
+		
+		Myfollower.html
+		<button routerLink="/Follower">
+		
+		page2.ts 
+		constructor(private route:ActivatedRoute){}
+		
+		ngOnInit(){
+			this.getDataFromUrl();
+		}
+		
+		getDataFromUrl(){
+			this.route.paramMap
+			.subscribe((param)=>{
+				console.log(param.get("id"))
+			})
+		}
+		
+
+summary & Interview Questions
+Test is conducted so Not Allowed for this session 
+
+Today's Lecture Agenda
+1 Send parameter
+2 Query Parameter
+3 dynamic routing 
+4 Lazy Loading 
+5 custom Module/feature module
+6 create ur routing file 
+	ng g m user --routing
+	
+
+summary & Interview Questions
+1 How to send QueyParamter through routing?
+2 How dynamic routing works?
+3 What is lazy loading? how to integrate in angular project?
+4 How to create custom module/feature module 
+
+
+
+
+
