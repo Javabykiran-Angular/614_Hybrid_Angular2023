@@ -1,0 +1,75 @@
+Last Lecture Agenda
+1 Send parameter
+	[
+		{
+			path:"Page3/:id/:username",component:Page3Component
+		}
+	]
+	
+	home.html 
+	<a [routerLink]="['/Page3',...,..]"
+		
+2 Query Parameter
+	<a routerLink="/..." [queryParams]="jsonObj">
+3 dynamic routing 
+	<button (click)="onPage1()">
+	
+	.ts 
+	onPage1(){
+		this.router.navigate(['/Page2',this.myid])
+	}
+	onQueryParam(){
+		this.router.navigate(['/Queryparam'],{
+			queryParams:this.jsonObj
+		})
+	}
+4 Lazy Loading 
+5 custom Module/feature module
+6 create ur routing file 
+	ng g m user --routing
+	
+	user-routing.module.ts 
+		[
+			{
+				path:"",component:ListUser
+			},
+			{
+				path:"Adduser",component:Adduser
+			}
+		]
+	
+	app-routing.module.ts
+	[
+		{
+			path:"user",loadchildern:()=>import('./user/user.module').then(m=>m.userModule)
+		}
+	]
+
+summary & Interview Questions
+1 How to send QueyParamter through routing?
+2 How dynamic routing works?
+3 What is lazy loading? how to integrate in angular project?
+4 How to create custom module/feature module 
+
+Today's Lecture Agenda
+1 Overview of Bootstrap
+	- It is framework -> css framework
+	- It has inbuild classess 
+	- It makes application Attractive 
+	- It makes ur application responsive 
+2 Integration of bootstrap
+	1 Online integration
+	2 offline integration
+3 Basic grid system of bootstrap
+
+summary & Interview Questions
+1 What is bootstrap?
+2 How to integrate bootstrap?
+3 why we use Bootstrap?
+4 How to use grid system in Bootstrap?
+
+
+
+
+
+
