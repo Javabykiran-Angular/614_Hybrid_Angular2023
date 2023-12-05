@@ -1,0 +1,58 @@
+<p>demotdf works!</p>
+
+<div class="container">
+    <div class="row">
+            <div class="col">
+
+                <form #f="ngForm">
+                    {{f.value|json}}
+                <div class="mt-2 mb-1">
+                    <label for="">Username::</label>
+                    <input #username="ngModel" ngModel minlength="5" 
+                    pattern="admin" name="myusername" class="form-control" type="text" placeholder="Enter The Username" required>
+
+                    <div *ngIf="username.touched && !username.valid "
+                        class="alert alert-danger"
+                    > ** Please Enter the username.... 
+
+                        <div *ngIf="username.errors?.minlength">
+                            ** Please enter the Minimum charater is {{username.errors?.minlength.requiredLength}} 
+                        </div>
+
+                        <div *ngIf="username.errors?.pattern">
+                            ** Please Enter the appropripate pattern 
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="mt-2 mb-1" >
+                    <label for="">Comment::</label>
+                    <textarea #comment="ngModel" ngModel class="form-control" name="comment"  cols="30" rows="5" placeholder="Enter the Comment " required></textarea>
+
+                    <div class="alert alert-danger" 
+                    *ngIf="comment.touched && comment.invalid">
+                            ** Please Enter the Comment 
+                    </div>
+                </div>
+
+                <div class="checkbox">
+                    <label for="check1">
+                      <input type="checkbox" id="check1"
+                      ngModel name="issubscribed"  
+                      #mail="ngModel" required> I Agree All the Terms & Conditions.
+                    </label>  
+
+                </div> <br>
+
+                <button [disabled]="!f.valid" class="btn btn-outline-success">Submit</button>
+
+            </form>
+
+
+            </div>
+
+    </div>
+</div>
